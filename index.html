@@ -110,10 +110,10 @@ cursor:pointer;
 <div class="search">
 <input type="text" placeholder="পণ্য খুঁজুন...">
 </div>
-
 <section class="products">
-  <div class="product">
-<img src="https://picsum.photos/300/200?random=1" alt="চাল">
+
+<div class="product">
+<img src="https://picsum.photos/300/200?random=1">
 <h3>চাল</h3>
 <p class="price">৳৭০/কেজি</p>
 <button onclick="addCart()">🛒 Add to Cart</button><br><br>
@@ -123,7 +123,7 @@ cursor:pointer;
 </div>
 
 <div class="product">
-<img src="https://picsum.photos/300/200?random=2" alt="ডাল">
+<img src="https://picsum.photos/300/200?random=2">
 <h3>মসুর ডাল</h3>
 <p class="price">৳১২০/কেজি</p>
 <button onclick="addCart()">🛒 Add to Cart</button><br><br>
@@ -133,7 +133,7 @@ cursor:pointer;
 </div>
 
 <div class="product">
-<img src="https://picsum.photos/300/200?random=3" alt="তেল">
+<img src="https://picsum.photos/300/200?random=3">
 <h3>সয়াবিন তেল</h3>
 <p class="price">৳২০০/লিটার</p>
 <button onclick="addCart()">🛒 Add to Cart</button><br><br>
@@ -143,7 +143,7 @@ cursor:pointer;
 </div>
 
 <div class="product">
-<img src="https://picsum.photos/300/200?random=4" alt="চিনি">
+<img src="https://picsum.photos/300/200?random=4">
 <h3>চিনি</h3>
 <p class="price">৳১৪০/কেজি</p>
 <button onclick="addCart()">🛒 Add to Cart</button><br><br>
@@ -152,17 +152,7 @@ cursor:pointer;
 </a>
 </div>
 
-<div class="product">
-<img src="https://picsum.photos/300/200?random=5" alt="লবণ">
-<h3>লবণ</h3>
-<p class="price">৳৪৫/কেজি</p>
-<button onclick="addCart()">🛒 Add to Cart</button><br><br>
-<a href="https://wa.me/8801307212689?text=আমি লবণ অর্ডার করতে চাই">
-<button>WhatsApp অর্ডার</button>
-</a>
-</div>
 </section>
-
 <section style="background:#fff;margin:20px;padding:20px;border-radius:10px;text-align:center;">
 <h2>🛒 আমার কার্ট</h2>
 <p>কার্টে পণ্য: <span id="cart">0</span></p>
@@ -172,43 +162,29 @@ cursor:pointer;
 <section style="background:#fff;margin:20px;padding:20px;border-radius:10px;">
 <h2>🔐 লগইন</h2>
 
-<input type="email" placeholder="ইমেইল"
+<input id="loginEmail" type="email" placeholder="ইমেইল"
 style="width:100%;padding:10px;margin:10px 0;">
 
-<input type="password" placeholder="পাসওয়ার্ড"
+<input id="loginPassword" type="password" placeholder="পাসওয়ার্ড"
 style="width:100%;padding:10px;margin:10px 0;">
 
-<button>লগইন</button>
+<button onclick="login()">লগইন</button>
 
 <hr style="margin:20px 0;">
 
 <h2>📝 রেজিস্ট্রেশন</h2>
 
-<input type="text" placeholder="আপনার নাম"
+<input id="name" type="text" placeholder="আপনার নাম"
 style="width:100%;padding:10px;margin:10px 0;">
 
-<input type="email" placeholder="ইমেইল"
+<input id="registerEmail" type="email" placeholder="ইমেইল"
 style="width:100%;padding:10px;margin:10px 0;">
 
-<input type="password" placeholder="পাসওয়ার্ড"
+<input id="registerPassword" type="password" placeholder="পাসওয়ার্ড"
 style="width:100%;padding:10px;margin:10px 0;">
 
-<button>রেজিস্টার</button>
+<button onclick="register()">রেজিস্টার</button>
 </section>
-
-<script>
-let cart=0;
-
-function addCart(){
-  cart++;
-  document.getElementById("cart").innerText=cart;
-}
-
-function clearCart(){
-  cart=0;
-  document.getElementById("cart").innerText=cart;
-}
-</script>
 <section style="background:#fff;margin:20px;padding:20px;border-radius:10px;">
 <h2>💳 বিকাশ / নগদ পেমেন্ট</h2>
 
@@ -228,24 +204,21 @@ function clearCart(){
 <p>📧 info@sostabazar.com</p>
 <p>© 2026 Sosta Bazar</p>
 </footer>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-analytics.js";
+<script>
+let cart = 0;
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBT2XdUXM6KvPTZ2lS6HmNKKQazwZtBqro",
-    authDomain: "sostabazar-9326b.firebaseapp.com",
-    projectId: "sostabazar-9326b",
-    storageBucket: "sostabazar-9326b.firebasestorage.app",
-    messagingSenderId: "367757647634",
-    appId: "1:367757647634:web:136566c671219e0eda1dcb",
-    measurementId: "G-7FKPQRW50G"
-  };
+function addCart() {
+  cart++;
+  document.getElementById("cart").innerText = cart;
+}
 
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+function clearCart() {
+  cart = 0;
+  document.getElementById("cart").innerText = cart;
+}
 </script>
-  <script type="module">
+
+<script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
 import {
   getAuth,
@@ -259,38 +232,36 @@ const firebaseConfig = {
   projectId: "sostabazar-9326b",
   storageBucket: "sostabazar-9326b.firebasestorage.app",
   messagingSenderId: "367757647634",
-  appId: "1:367757647634:web:136566c671219e0eda1dcb",
-  measurementId: "G-7FKPQRW50G"
+  appId: "1:367757647634:web:136566c671219e0eda1dcb"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-window.register = function () {
-  const email = document.querySelectorAll('input[type="email"]')[1].value;
-  const password = document.querySelectorAll('input[type="password"]')[1].value;
+window.register = async function () {
+  const email = document.getElementById("registerEmail").value;
+  const password = document.getElementById("registerPassword").value;
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then(() => {
-      alert("রেজিস্ট্রেশন সফল!");
-    })
-    .catch((error) => {
-      alert(error.message);
-    });
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    alert("রেজিস্ট্রেশন সফল!");
+  } catch (e) {
+    alert(e.message);
+  }
 };
 
-window.login = function () {
-  const email = document.querySelectorAll('input[type="email"]')[0].value;
-  const password = document.querySelectorAll('input[type="password"]')[0].value;
+window.login = async function () {
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then(() => {
-      alert("লগইন সফল!");
-    })
-    .catch((error) => {
-      alert(error.message);
-    });
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    alert("লগইন সফল!");
+  } catch (e) {
+    alert(e.message);
+  }
 };
 </script>
+
 </body>
 </html>
