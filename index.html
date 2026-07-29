@@ -6,51 +6,65 @@
 <title>সস্তা বাজার</title>
 
 <style>
-<section style="max-width:400px;margin:30px auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.2);">
-<h2>লগইন</h2>
-
-<input type="email" placeholder="ইমেইল" style="width:100%;padding:10px;margin:8px 0;">
-<input type="password" placeholder="পাসওয়ার্ড" style="width:100%;padding:10px;margin:8px 0;">
-
-<button style="width:100%;">লগইন</button>
-
-<hr>
-
-<h2>রেজিস্ট্রেশন</h2>
-
-<input type="text" placeholder="নাম" style="width:100%;padding:10px;margin:8px 0;">
-<input type="email" placeholder="ইমেইল" style="width:100%;padding:10px;margin:8px 0;">
-<input type="password" placeholder="পাসওয়ার্ড" style="width:100%;padding:10px;margin:8px 0;">
-
-<button style="width:100%;">রেজিস্টার</button>
-</section>{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
+}
+
+body{
 background:#f5f5f5;
 }
 
 header{
-background:#28a745;
+background:#0a8f3d;
 color:white;
 padding:20px;
 text-align:center;
 }
 
-.products{
+nav{
+background:#fff;
+padding:10px;
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
+gap:15px;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+.search{
+text-align:center;
+margin:20px;
+}
+
+.search input{
+width:90%;
+max-width:400px;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 padding:20px;
 }
 
 .product{
-background:white;
-width:230px;
+background:#fff;
 padding:15px;
 border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,.2);
 text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.15);
 }
 
 .product img{
@@ -64,6 +78,7 @@ border-radius:8px;
 color:red;
 font-size:20px;
 font-weight:bold;
+margin:10px 0;
 }
 
 button{
@@ -73,29 +88,29 @@ border:none;
 padding:10px 20px;
 border-radius:8px;
 cursor:pointer;
-font-size:16px;
-}
-
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:20px;
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
-<h1>🛒 রাব্বির সস্তা বাজার</h1>
+<h1>🛒 সস্তা বাজার</h1>
 <p>কম দামে ভালো পণ্য</p>
 </header>
 
-<section class="products">
+<nav>
+<a href="#">হোম</a>
+<a href="#">পণ্য</a>
+<a href="#">যোগাযোগ</a>
+<a href="#">লগইন</a>
+</nav>
 
-<div class="product">
+<div class="search">
+<input type="text" placeholder="পণ্য খুঁজুন...">
+</div>
+
+<section class="products"><div class="product">
 <img src="https://via.placeholder.com/250" alt="চাল">
 <h3>চাল</h3>
 <p class="price">৳৭০/কেজি</p>
@@ -124,60 +139,36 @@ margin-top:20px;
 
 </section>
 
-<footer>
-<h3>যোগাযোগ</h3>
-<p>📞 01307212689</p>
-<p>WhatsApp-এ অর্ডার করুন</p>
-</footer>
-
-</body>
-</html>
-<section class="form-box">
+<section style="max-width:450px;margin:30px auto;background:#fff;padding:20px;border-radius:10px;">
 <h2>🔐 লগইন</h2>
-
-<input type="email" placeholder="ইমেইল">
-<input type="password" placeholder="পাসওয়ার্ড">
-
+<input type="email" placeholder="ইমেইল" style="width:100%;padding:10px;margin:8px 0;">
+<input type="password" placeholder="পাসওয়ার্ড" style="width:100%;padding:10px;margin:8px 0;">
 <button>লগইন</button>
 
 <hr style="margin:20px 0;">
 
 <h2>📝 রেজিস্ট্রেশন</h2>
-
-<input type="text" placeholder="আপনার নাম">
-<input type="email" placeholder="ইমেইল">
-<input type="password" placeholder="পাসওয়ার্ড">
-
+<input type="text" placeholder="নাম" style="width:100%;padding:10px;margin:8px 0;">
+<input type="email" placeholder="ইমেইল" style="width:100%;padding:10px;margin:8px 0;">
+<input type="password" placeholder="পাসওয়ার্ড" style="width:100%;padding:10px;margin:8px 0;">
 <button>রেজিস্টার</button>
-
 </section>
 
-<section class="payment">
-
+<section style="max-width:500px;margin:30px auto;background:#fff;padding:20px;border-radius:10px;text-align:center;">
 <h2>💳 বিকাশ / নগদ পেমেন্ট</h2>
 
-<p><strong>বিকাশ:</strong> 01307212689</p>
+<p><b>বিকাশ:</b> 01307212689</p>
+<p><b>নগদ:</b> 01307212689</p>
 
-<p><strong>নগদ:</strong> 01307212689</p>
-
-<p>পেমেন্ট করার পর নিচের বাটনে ক্লিক করে ট্রানজেকশন আইডি পাঠান।</p>
-
-<a href="https://wa.me/8801307212689?text=আমি%20পেমেন্ট%20করেছি।%20আমার%20Transaction%20ID:%20">
+<a href="https://wa.me/8801307212689?text=আমি পেমেন্ট করেছি। Transaction ID:">
 <button>পেমেন্ট কনফার্ম করুন</button>
 </a>
-
 </section>
 
-<footer>
-
+<footer style="background:#222;color:#fff;text-align:center;padding:20px;">
 <h3>📞 যোগাযোগ</h3>
-
-<p>মোবাইল: 01307212689</p>
-
-<p>WhatsApp-এ অর্ডার করুন</p>
-
-<p>© 2026 রাব্বির সস্তা বাজার</p>
-
+<p>01307212689</p>
+<p>© 2026 সস্তা বাজার</p>
 </footer>
 
 </body>
