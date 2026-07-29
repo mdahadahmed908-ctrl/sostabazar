@@ -245,5 +245,52 @@ function clearCart(){
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
+  <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBT2XdUXM6KvPTZ2lS6HmNKKQazwZtBqro",
+  authDomain: "sostabazar-9326b.firebaseapp.com",
+  projectId: "sostabazar-9326b",
+  storageBucket: "sostabazar-9326b.firebasestorage.app",
+  messagingSenderId: "367757647634",
+  appId: "1:367757647634:web:136566c671219e0eda1dcb",
+  measurementId: "G-7FKPQRW50G"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.register = function () {
+  const email = document.querySelectorAll('input[type="email"]')[1].value;
+  const password = document.querySelectorAll('input[type="password"]')[1].value;
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      alert("রেজিস্ট্রেশন সফল!");
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+};
+
+window.login = function () {
+  const email = document.querySelectorAll('input[type="email"]')[0].value;
+  const password = document.querySelectorAll('input[type="password"]')[0].value;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      alert("লগইন সফল!");
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+};
+</script>
 </body>
 </html>
