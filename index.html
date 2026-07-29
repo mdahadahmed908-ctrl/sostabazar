@@ -228,6 +228,22 @@ function clearCart(){
 <p>📧 info@sostabazar.com</p>
 <p>© 2026 Sosta Bazar</p>
 </footer>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-analytics.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyBT2XdUXM6KvPTZ2lS6HmNKKQazwZtBqro",
+    authDomain: "sostabazar-9326b.firebaseapp.com",
+    projectId: "sostabazar-9326b",
+    storageBucket: "sostabazar-9326b.firebasestorage.app",
+    messagingSenderId: "367757647634",
+    appId: "1:367757647634:web:136566c671219e0eda1dcb",
+    measurementId: "G-7FKPQRW50G"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
