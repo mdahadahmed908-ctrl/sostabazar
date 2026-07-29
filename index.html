@@ -14,46 +14,42 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f4f4f4;
+background:#f5f5f5;
 }
 
 header{
 background:#0a8f3d;
-color:white;
+color:#fff;
 padding:20px;
 text-align:center;
 }
 
-header h1{
-font-size:32px;
-}
-
 nav{
-background:#fff;
 display:flex;
 justify-content:center;
 gap:20px;
+background:#fff;
 padding:15px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
+box-shadow:0 2px 5px rgba(0,0,0,.1);
 }
 
 nav a{
 text-decoration:none;
-color:#222;
+color:#333;
 font-weight:bold;
 }
 
 .search{
-padding:20px;
 text-align:center;
+padding:20px;
 }
 
 .search input{
 width:90%;
 max-width:500px;
 padding:12px;
-border-radius:8px;
 border:1px solid #ccc;
+border-radius:8px;
 }
 
 .products{
@@ -65,8 +61,8 @@ padding:20px;
 
 .product{
 background:#fff;
-padding:15px;
 border-radius:10px;
+padding:15px;
 text-align:center;
 box-shadow:0 2px 8px rgba(0,0,0,.15);
 }
@@ -79,7 +75,7 @@ border-radius:8px;
 }
 
 .price{
-color:#e53935;
+color:red;
 font-size:20px;
 font-weight:bold;
 margin:10px 0;
@@ -88,15 +84,10 @@ margin:10px 0;
 button{
 background:#25D366;
 color:#fff;
+padding:10px 18px;
 border:none;
-padding:10px 20px;
 border-radius:8px;
 cursor:pointer;
-font-size:16px;
-}
-
-button:hover{
-background:#1ba851;
 }
 </style>
 
@@ -112,8 +103,7 @@ background:#1ba851;
 <nav>
 <a href="#">হোম</a>
 <a href="#">পণ্য</a>
-<a href="#">অফার</a>
-<a href="#">যোগাযোগ</a>
+<a href="#">কার্ট</a>
 <a href="#">লগইন</a>
 </nav>
 
@@ -123,145 +113,120 @@ background:#1ba851;
 
 <section class="products">
   <div class="product">
-<img src="https://images.unsplash.com/photo-1586201375761-83865001e31b?w=400" alt="চাল">
-<h3>চাল (Premium)</h3>
-<p class="price">৳ ৭০ / কেজি</p>
-<button>🛒 Add to Cart</button><br><br>
+<img src="https://picsum.photos/300/200?random=1" alt="চাল">
+<h3>চাল</h3>
+<p class="price">৳৭০/কেজি</p>
+<button onclick="addCart()">🛒 Add to Cart</button><br><br>
 <a href="https://wa.me/8801307212689?text=আমি চাল অর্ডার করতে চাই">
 <button>WhatsApp অর্ডার</button>
 </a>
 </div>
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1515543904379-3d757afe72e4?w=400" alt="ডাল">
+<img src="https://picsum.photos/300/200?random=2" alt="ডাল">
 <h3>মসুর ডাল</h3>
-<p class="price">৳ ১২০ / কেজি</p>
-<button>🛒 Add to Cart</button><br><br>
+<p class="price">৳১২০/কেজি</p>
+<button onclick="addCart()">🛒 Add to Cart</button><br><br>
 <a href="https://wa.me/8801307212689?text=আমি ডাল অর্ডার করতে চাই">
 <button>WhatsApp অর্ডার</button>
 </a>
 </div>
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400" alt="তেল">
-<h3>সয়াবিন তেল</h3>
-<p class="price">৳ ২০০ / লিটার</p>
-<button>🛒 Add to Cart</button><br><br>
+<img src="https://picsum.photos/300/200?random=3" alt="তেল">
+<h3>সয়াবিন তেল</h3>
+<p class="price">৳২০০/লিটার</p>
+<button onclick="addCart()">🛒 Add to Cart</button><br><br>
 <a href="https://wa.me/8801307212689?text=আমি তেল অর্ডার করতে চাই">
 <button>WhatsApp অর্ডার</button>
 </a>
 </div>
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=400" alt="চিনি">
+<img src="https://picsum.photos/300/200?random=4" alt="চিনি">
 <h3>চিনি</h3>
-<p class="price">৳ ১৪০ / কেজি</p>
-<button>🛒 Add to Cart</button><br><br>
+<p class="price">৳১৪০/কেজি</p>
+<button onclick="addCart()">🛒 Add to Cart</button><br><br>
 <a href="https://wa.me/8801307212689?text=আমি চিনি অর্ডার করতে চাই">
 <button>WhatsApp অর্ডার</button>
 </a>
 </div>
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1576186726115-4d51596775d1?w=400" alt="লবণ">
+<img src="https://picsum.photos/300/200?random=5" alt="লবণ">
 <h3>লবণ</h3>
-<p class="price">৳ ৪৫ / কেজি</p>
-<button>🛒 Add to Cart</button><br><br>
+<p class="price">৳৪৫/কেজি</p>
+<button onclick="addCart()">🛒 Add to Cart</button><br><br>
 <a href="https://wa.me/8801307212689?text=আমি লবণ অর্ডার করতে চাই">
 <button>WhatsApp অর্ডার</button>
 </a>
 </div>
 </section>
 
-<section style="padding:20px;background:#fff;margin:20px;border-radius:10px;">
-
-<h2 align="center">🛒 আমার কার্ট</h2>
-
-<p align="center">
-কার্টে পণ্য: <span id="cartCount">0</span>
-</p>
-
-<div align="center">
-<button onclick="clearCart()">🗑️ কার্ট খালি করুন</button>
-</div>
-
+<section style="background:#fff;margin:20px;padding:20px;border-radius:10px;text-align:center;">
+<h2>🛒 আমার কার্ট</h2>
+<p>কার্টে পণ্য: <span id="cart">0</span></p>
+<button onclick="clearCart()">কার্ট খালি করুন</button>
 </section>
 
-<section style="max-width:500px;margin:20px auto;background:#fff;padding:20px;border-radius:10px;">
-
+<section style="background:#fff;margin:20px;padding:20px;border-radius:10px;">
 <h2>🔐 লগইন</h2>
 
-<input type="email" id="email" placeholder="ইমেইল"
-style="width:100%;padding:10px;margin:8px 0;">
+<input type="email" placeholder="ইমেইল"
+style="width:100%;padding:10px;margin:10px 0;">
 
-<input type="password" id="password" placeholder="পাসওয়ার্ড"
-style="width:100%;padding:10px;margin:8px 0;">
+<input type="password" placeholder="পাসওয়ার্ড"
+style="width:100%;padding:10px;margin:10px 0;">
 
-<button style="width:100%;">লগইন</button>
+<button>লগইন</button>
 
 <hr style="margin:20px 0;">
 
 <h2>📝 রেজিস্ট্রেশন</h2>
 
-<input type="text" placeholder="নাম"
-style="width:100%;padding:10px;margin:8px 0;">
+<input type="text" placeholder="আপনার নাম"
+style="width:100%;padding:10px;margin:10px 0;">
 
 <input type="email" placeholder="ইমেইল"
-style="width:100%;padding:10px;margin:8px 0;">
+style="width:100%;padding:10px;margin:10px 0;">
 
 <input type="password" placeholder="পাসওয়ার্ড"
-style="width:100%;padding:10px;margin:8px 0;">
+style="width:100%;padding:10px;margin:10px 0;">
 
-<button style="width:100%;">রেজিস্টার</button>
-
+<button>রেজিস্টার</button>
 </section>
 
 <script>
 let cart=0;
 
-document.querySelectorAll(".product button").forEach(btn=>{
-btn.addEventListener("click",function(){
-if(this.innerText.includes("Add to Cart")){
-cart++;
-document.getElementById("cartCount").innerText=cart;
+function addCart(){
+  cart++;
+  document.getElementById("cart").innerText=cart;
 }
-});
-});
 
 function clearCart(){
-cart=0;
-document.getElementById("cartCount").innerText=cart;
+  cart=0;
+  document.getElementById("cart").innerText=cart;
 }
 </script>
-<section style="max-width:600px;margin:20px auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.15);">
-
-<h2 align="center">💳 পেমেন্ট</h2>
+<section style="background:#fff;margin:20px;padding:20px;border-radius:10px;">
+<h2>💳 বিকাশ / নগদ পেমেন্ট</h2>
 
 <p><strong>বিকাশ:</strong> 01307212689</p>
 <p><strong>নগদ:</strong> 01307212689</p>
 
-<p>পেমেন্ট করার পরে নিচের বাটনে চাপ দিয়ে WhatsApp-এ Transaction ID পাঠান।</p>
+<p>পেমেন্ট করার পরে WhatsApp-এ Transaction ID পাঠান।</p>
 
 <a href="https://wa.me/8801307212689?text=আমি পেমেন্ট করেছি। আমার Transaction ID:">
-<button style="width:100%;margin-top:10px;">
-💬 পেমেন্ট কনফার্ম করুন
-</button>
+<button>💬 পেমেন্ট কনফার্ম করুন</button>
 </a>
-
 </section>
 
-<footer style="background:#222;color:#fff;text-align:center;padding:25px;margin-top:30px;">
-
+<footer style="background:#222;color:#fff;text-align:center;padding:20px;">
 <h2>🛒 সস্তা বাজার</h2>
-
-<p>📞 ফোন: 01307212689</p>
-
-<p>📧 Email: info@sostabazar.com</p>
-
-<p>📍 বাংলাদেশ</p>
-
-<p>© 2026 Sosta Bazar. All Rights Reserved.</p>
-
+<p>📞 01307212689</p>
+<p>📧 info@sostabazar.com</p>
+<p>© 2026 Sosta Bazar</p>
 </footer>
 
 </body>
